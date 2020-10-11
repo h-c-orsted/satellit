@@ -15,9 +15,9 @@ void setup() {
   earth.setTexture(earth_img);
   
   satellites.add(new Satellite("25544"));  // ISS
-  satellites.add(new Satellite("39574"));
-  satellites.add(new Satellite("39227"));
-  satellites.add(new Satellite("28647"));
+  satellites.add(new Satellite("39574"));  // Random satellite #1
+  satellites.add(new Satellite("39227"));  // Random satellite #2
+  satellites.add(new Satellite("28647"));  // Random satellite #3
   for (Satellite s : satellites) s.update();  // Load data on each satellite
   
 }
