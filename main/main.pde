@@ -40,16 +40,14 @@ void draw() {
   for (Satellite s : satellites) {
     s.display();
   }
-  if (frameCount%240 == 0) thread("updateSats");  // Every 4 seconds, update. We get current and 2 seconds ahead
+  if (frameCount%120 == 0) thread("updateSats");  // Every 2 seconds, update position
 }
 
 
 
 // Made this a function so that we could thread it
 void updateSats() {
-  for (Satellite s : satellites) {
-    s.update();
-  }
+  for (Satellite s : satellites) s.update();
 }
 
 
